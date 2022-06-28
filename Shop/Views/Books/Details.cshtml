@@ -1,0 +1,45 @@
+﻿@model Shop.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+
+}
+
+<h2>详情</h2>
+<dt>
+    <img src="~/Image/@Html.DisplayFor(model => model.Photo)" alt="图片显示失败" />
+</dt>
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="font-size:25px;">
+
+        <dt>
+           名称：
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+           价格：
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price) 元
+        </dd>  
+
+        <dt>
+            种类：
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kind)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
